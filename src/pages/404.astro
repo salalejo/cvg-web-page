@@ -1,0 +1,53 @@
+---
+const title = 'Página no encontrada | CVG';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <a class="wordmark" href="/" aria-label="CVG and Co., inicio">
+        <img src="/images/cvg-logo.webp" alt="CVG &amp; Co." width="399" height="245" />
+      </a>
+      <p class="eyebrow">ERROR 404</p>
+      <h1>Esta página no está disponible.</h1>
+      <p class="description">Puede que la dirección haya cambiado. Vuelve al inicio y encuentra el camino.</p>
+      <a class="button" href="/">Volver al inicio <span aria-hidden="true">↗</span></a>
+    </main>
+  </body>
+</html>
+
+<style>
+  :global(*) { box-sizing: border-box; }
+  :global(body) {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    margin: 0;
+    padding: 24px;
+    background: #f5f5f3;
+    color: #111111;
+    font-family: 'Manrope', sans-serif;
+  }
+  main { width: min(100%, 600px); }
+  .wordmark { display: inline-block; margin-bottom: 96px; color: #111111; font-size: 24px; font-weight: 700; letter-spacing: -1.5px; text-decoration: none; }
+  .wordmark img { display: block; width: 112px; height: 69px; object-fit: contain; }
+  .eyebrow { color: #656563; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; line-height: 16px; }
+  h1 { margin-block: 16px; font-size: 48px; font-weight: 600; letter-spacing: -2.2px; line-height: 1; text-wrap: balance; }
+  .description { max-width: 480px; margin-bottom: 24px; color: #6e6e6c; font-size: 16px; line-height: 24px; text-wrap: pretty; }
+  .button { display: inline-flex; min-height: 48px; align-items: center; gap: 12px; padding: 8px 12px; border-radius: 8px; background: #111111; color: #ffffff; font-size: 16px; font-weight: 600; line-height: 24px; text-decoration: none; transition: transform 700ms cubic-bezier(0.32, 0.72, 0, 1); }
+  .button:hover { transform: translateY(-2px); }
+  .button:active { transform: translateY(1px) scale(0.98); }
+  .button:focus-visible { outline: 2px solid #555555; outline-offset: 4px; }
+  @media (max-width: 680px) { h1 { font-size: 36px; letter-spacing: -1.5px; } .wordmark { margin-bottom: 64px; } }
+</style>
